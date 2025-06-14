@@ -1,26 +1,26 @@
 - name: Tokyo Turntable
   description: "A mobile-first Rails application that helps users discover live music events in Tokyo based on their musical preferences"
   images:
-    - projects/tokyo_turntable_home.png
-    - projects/tokyo_turntable_gig.png
-    - projects/tokyo_turntable_venues.png
-    - projects/tokyo_turntable_profile.png
+    - images/projects/tokyo_turntable_home.png
+    - imagesprojects/tokyo_turntable_gig.png
+    - imagesprojects/tokyo_turntable_venues.png
+    - images/projects/tokyo_turntable_profile.png
   url: www.tokyoturntable.com
 
 - name: Rentool
   description: "A peer-to-peer tool rental marketplace app for users across Tokyo, built with Ruby on Rails"
   images:
-    - projects/rentool_home.png
-    - projects/rentool_index.png
-    - projects/rentool_checkout.png
-    - projects/rentool_dashboard.png
+    - images/projects/rentool_home.png
+    - images/projects/rentool_index.png
+    - images/projects/rentool_checkout.png
+    - images/projects/rentool_dashboard.png
   url: https://airbnb-carved-duck-e9e78c22c0c6.herokuapp.com/
 
 - name: Japanese Film Library
   description: "A Ruby on Rails application for managing a curated collection of classic Japanese films"
   images:
-    - projects/films_home
-    - projects/films_show.png
-    - projects/films_info.png
-    - projects/films_list.png
+    - images/projects/films_home.png
+    - images/projects/films_show.png
+    - images/projects/films_info.png
+    - images/projects/films_list.png
   url: https://www.google.com
