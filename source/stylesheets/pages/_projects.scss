@@ -12,8 +12,10 @@
   }
 
   .wrapper {
-    margin-top: 3rem;
-    width: 80%;* {
+    margin-top: 5rem;
+    overflow: visible;
+    align-items: start;
+    width: 100%;* {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -26,10 +28,25 @@
 
 
   .container {
-      height: 350px;
+      opacity: 0;
+      animation: fadeInContainer 0.8s ease-in-out forwards;
+      animation-delay: 0.3s;
+      min-height: 350px;
       display: flex;
       flex-wrap: nowrap;
       justify-content: start;
+      overflow: visible;
+  }
+
+  @keyframes fadeInContainer {
+    from {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .card {
@@ -37,15 +54,15 @@
       background-color: transparent;
       position: relative;
       border-radius: .75rem;
-      // background-size: cover;
+      background-size: cover;
       cursor: pointer;
-      overflow: hidden;
+      overflow: visible;
       border-radius: 2rem;
       margin: 0 10px;
       display: flex;
       align-items: flex-end;
       transition: background-image 0.3s ease;
-      transition: .8s cubic-bezier(.28,-0.03,0,.99);
+      transition: 1.4s cubic-bezier(.28,-0.03,0,.99);
       box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
   }
 
@@ -55,8 +72,9 @@
     inset: 0;
     opacity: 0;
     width: 100%;
-    height: 73%;
+    height: 66%;
     background-size: cover;
+    overflow: visible;
     background-position: center;
     background-repeat: no-repeat;
     transition: opacity 0.2s ease-in-out;
@@ -69,7 +87,7 @@
   }
 
   .card-1::before {
-    background-image: url('/images/projects/tokyo_turntable_home.png');
+    background-image: url('/images/projects/tokyo_turntable_neww.png');
   }
   .card-2::before {
     background-image: url('/images/projects/rentool_home.png');
@@ -87,6 +105,7 @@
   .card > .row {
       color: white;
       display: flex;
+      align-items: end;
       flex-wrap: nowrap;
   }
 
@@ -95,6 +114,7 @@
       color: white;
       border-radius: 50%;
       width: 50px;
+      height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -105,13 +125,13 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-      height: 80px;
+      height: 120px;
       width: 520px;
       opacity: 0;
-      transform: translateY(30px);
+      gap: 6px;
+      transform: translateY(20px);
       transition-delay: .3s;
       transition: all .3s ease;
-      padding-bottom: 8px;
   }
 
   .description p {
@@ -121,6 +141,7 @@
 
   .description h4 {
       text-transform: uppercase;
+      font-size: 20px;
   }
 
   input {
@@ -152,7 +173,12 @@
   .tech-tags span {
     background-color: grey;
     border-radius: 24px;
-    padding: 2px 4px;
+    padding: 2px 5px;
+  }
+
+  .demo-link {
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
 }

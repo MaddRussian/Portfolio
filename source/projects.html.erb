@@ -14,12 +14,11 @@
               <div class="icon"><%= i + 1 %></div>
               <div class="description">
                 <div class="card-title">
-                  <h4><%= project.name %></h4>
-                  <%= link_to "Live Demo", project.url, target: "_blank", rel: "noopener" %>
+                  <h4><%= project.name %> <%= link_to "Live Demo ➡️", project.url, class: "demo-link", target: "_blank", rel: "noopener" %></h4>
                 </div>
                 <p><%= project.description %></p>
                 <div class="tech-tags">
-                  <% ["Ruby on Rails", "Stimulus", "Mapbox", "PostgreSQL"].each do |tech| %>
+                  <% project.tech.each do |tech| %>
                     <span><%= tech %></span>
                   <% end %>
                 </div>

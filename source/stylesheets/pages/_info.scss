@@ -1,0 +1,28 @@
+.info-section {
+  opacity: 0;
+  animation: fadeInInfo 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+  transform: translateY(10px);
+
+  p {
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    margin-left: 80px;
+    margin-top: 150px;
+    line-height: 2.5rem;
+    padding-left: 10px;
+    border-left: 0.5px solid #3a6a8b;
+  }
+}
+
+@keyframes fadeInInfo {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,26 +1,37 @@
 - name: Tokyo Turntable
-  description: "An app for finding live music in Tokyo"
+  description: "A mobile-first rails app for finding live music in Tokyo"
   images:
     - images/projects/tokyo_turntable_home.png
     - imagesprojects/tokyo_turntable_gig.png
     - imagesprojects/tokyo_turntable_venues.png
     - images/projects/tokyo_turntable_profile.png
-  url: www.tokyoturntable.com
+  tech:
+    - Ruby on rails
+    - Stimulus
+    - Mapbox
+    - Spotify API
+  url: https://www.tokyoturntable.com
 
 - name: レンtool
-  description: "A peer-to-peer marketplace for renting tools"
+  description: "A peer-to-peer tool rental marketplace app"
   images:
     - images/projects/rentool_home.png
     - images/projects/rentool_index.png
     - images/projects/rentool_checkout.png
     - images/projects/rentool_dashboard.png
+  tech:
+    - Ruby on rails
+    - Mapbox
+    - Devise
   url: https://airbnb-carved-duck-e9e78c22c0c6.herokuapp.com/
 
 - name: Japanese Film Library
-  description: "A curated collection of Japanese classics."
+  description: "A curated collection of Japanese classics"
   images:
     - images/projects/films_home.png
     - images/projects/films_show.png
     - images/projects/films_info.png
     - images/projects/films_list.png
+  tech:
+    - Ruby on rails
   url: https://www.google.com

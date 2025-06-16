@@ -1,4 +1,5 @@
 @import "pages/projects";
+@import "pages/info";
 
 * {
   box-sizing: border-box;
@@ -101,31 +102,17 @@ a {
   }
 }
 
-/* Info Page Highlight */
-#info {
-  border-bottom: 1px solid #3a6a8b;
-}
-
-.info-section {
-  p {
-    text-align: left;
-    max-width: 200px;
-    min-width: 150px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 100px;
-    line-height: 1.3rem;
-    padding-left: 10px;
-    border-left: 0.5px solid #3a6a8b;
-  }
-}
-
 .hidden {
   visibility: hidden;
 }
 
 /* Projects Page Highlight */
 #projects {
+  border-bottom: 1px solid #3a6a8b;
+}
+
+/* Info Page Highlight */
+#info {
   border-bottom: 1px solid #3a6a8b;
 }
 
