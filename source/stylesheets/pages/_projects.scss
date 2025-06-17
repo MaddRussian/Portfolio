@@ -1,6 +1,4 @@
 .projects-section {
-  margin-top: auto;
-  margin-bottom: 10px;
 
   * {
     box-sizing: border-box;
@@ -22,6 +20,7 @@
 
   .container {
     opacity: 0;
+    position: relative;
     animation: fadeInContainer 0.8s ease-in-out forwards;
     animation-delay: 0.3s;
     min-height: 350px;
@@ -29,6 +28,7 @@
     flex-wrap: nowrap;
     justify-content: start;
     overflow: visible;
+    margin-bottom: 8px;
   }
 
   @keyframes fadeInContainer {
@@ -168,7 +168,7 @@
   .tech-tags span {
     background-color: grey;
     border-radius: 24px;
-    padding: 4px 6px;
+    padding: 2px 5px;
   }
 
   .demo-link {
@@ -180,81 +180,188 @@
 @media (max-width: 540px) {
   .projects-section {
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #eeeeea;
+    }
+
+    .wrapper {
+      overflow: visible;
+      align-items: start;
+      width: 100%;
+    }
+
     .container {
-      flex-direction: column;
-      flex-wrap: wrap;
-      height: auto; // Allow vertical growth
-      align-items: center;
+      opacity: 0;
+      position: relative;
+      animation: fadeInContainer 0.8s ease-in-out forwards;
+      animation-delay: 0.3s;
+      min-height: 300px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: start;
+      overflow: visible;
+      margin-bottom: 8px;
+    }
+
+    @keyframes fadeInContainer {
+      from {
+        opacity: 0;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .card {
-      width: 90%;
-      height: auto;
-      margin: 1rem 0;
-      flex-direction: column;
+      width: 80px;
+      background-color: transparent;
+      position: relative;
+      border-radius: .75rem;
+      background-size: cover;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 2rem;
+      margin: 0 10px;
+      display: flex;
+      align-items: flex-end;
+      transition: all 1.4s cubic-bezier(.28,-0.03,0,.99);
+      box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      width: 100%;
+      height: 66%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity 0.2s ease-in-out;
+      z-index: 0;
+    }
+
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-1::before {
+      background-image: url('/images/projects/tokyo_turntable_neww.png');
+      background-size: contain;
+    }
+    .card-2::before {
+      background-image: url('/images/projects/rentool_home.png');
+      background-size: contain;
+    }
+    .card-3::before {
+      background-image: url('/images/projects/films_home.png');
+      background-size: contain;
+    }
+
+    input#c1:checked + label.card-1::before,
+    input#c2:checked + label.card-2::before,
+    input#c3:checked + label.card-3::before {
+      opacity: 1;
     }
 
     .card > .row {
-      flex-direction: row;
-      align-items: flex-end;
-      gap: 1rem;
-      justify-content: flex-end;
+      color: white;
+      display: flex;
+      align-items: end;
+      justify-content: start;
+      flex-wrap: nowrap;
       width: 100%;
-      height: auto;
+      height: 100%;
+      padding-bottom: 13px;
     }
 
     .card > .row > .icon {
-      margin-bottom: 1rem;
+      background: #223;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px;
+      flex-shrink: 1;
     }
 
     .card > .row > .description {
-      position: static;
-      width: 100%;
-      height: auto;
-      opacity: 1;
-      transform: none;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      height: 120px;
+      width: 140px;
+      opacity: 0;
+      gap: 8px;
+      transform: translateX(-20px);
+      transition: all 0.5s ease;
+      position: absolute;
+    }
+
+    .description p {
+      color: #b0b0ba;
+      font-size: 12px;
+      margin-top: -8px;
+      margin-left: -20px;
+    }
+
+    .description h4 {
+      text-transform: uppercase;
       font-size: 14px;
+      padding-top: 10px;
+      margin-top: 4px;
+      margin-left: -20px;
+    }
+
+    input {
+      display: none;
     }
 
     input:checked + label {
-      width: 100% !important;
-      height: auto !important;
-      min-height: 300px;
+      width: 600px;
     }
 
     input:checked + label .description {
       opacity: 1 !important;
-      transform: none !important;
+      transform: translateX(0) !important;
     }
 
-    input:checked + label.card-X::before {
-      opacity: 1;
-    }
-
-    .card::before {
-      height: 50%;
-      opacity: 0;
-    }
-
-    .description p {
-      font-size: 14px;
-      line-height: 1.5rem;
-    }
-
-    .description h4 {
-      font-size: 16px;
+    .card-title {
+      display: block;
     }
 
     .tech-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 0.5rem;
+      margin-top: -4px;
+      margin-left: -20px;
+      font-size: 10px;
+      line-height: 1.8;
     }
 
     .tech-tags span {
-      font-size: 12px;
-      padding: 3px 6px;
+      background-color: grey;
+      border-radius: 24px;
+      padding: 2px 5px;
+      margin: 6px 2px;
+    }
+
+    .demo-link {
+      font-size: 10px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
   }
 }
