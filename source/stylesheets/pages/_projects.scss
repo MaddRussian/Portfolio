@@ -168,7 +168,7 @@
   .tech-tags span {
     background-color: grey;
     border-radius: 24px;
-    padding: 2px 5px;
+    padding: 4px 6px;
   }
 
   .demo-link {
@@ -176,4 +176,43 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      margin-top: 2rem;
+    }
+
+    .container {
+      min-height: 300px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 1rem;
+    }
+
+    .card {
+      min-width: 280px;
+      margin-right: 1rem;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+    }
+
+    .card-tags {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .card-tag {
+      font-size: 0.8rem;
+      padding: 2px 4px;
+    }
+  }
 }

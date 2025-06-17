@@ -8,10 +8,10 @@
   p {
     text-align: left;
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: 80px;
     margin-top: 150px;
-    line-height: 2.5rem;
+    line-height: 3.0rem;
     padding-left: 10px;
     border-left: 0.5px solid #3a6a8b;
   }
@@ -26,4 +26,17 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@media (max-width: 540px) {
+  .info-section {
+    p {
+      line-height: 2.0;
+      margin-left: 8px;
+      margin-top: 48px;
+      max-width: 200px;
+    }
+  }
+
+
 }

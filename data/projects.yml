@@ -22,6 +22,7 @@
   tech:
     - Ruby on rails
     - Mapbox
+    - Stimulus
     - Devise
   url: https://airbnb-carved-duck-e9e78c22c0c6.herokuapp.com/
 
@@ -34,4 +35,5 @@
     - images/projects/films_list.png
   tech:
     - Ruby on rails
-  url: https://www.google.com
+    - PostgreSQL
+  url: https://my-movie-watchlist-a8e94ec19003.herokuapp.com
