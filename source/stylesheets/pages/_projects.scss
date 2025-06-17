@@ -181,47 +181,80 @@
   .projects-section {
 
     .container {
-      height: 200px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: auto; // Allow vertical growth
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+      height: auto;
+      margin: 1rem 0;
+      flex-direction: column;
     }
 
     .card > .row {
-      width: 20px;
-      color: white;
-      display: flex;
-      align-items: end;
-      justify-content: start;
-      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 1rem;
+      justify-content: flex-end;
       width: 100%;
-      height: 100%;
-      padding-bottom: 13px;
+      height: auto;
     }
 
     .card > .row > .icon {
-      background: #223;
-      color: white;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 15px;
-      flex-shrink: 0;
+      margin-bottom: 1rem;
     }
 
     .card > .row > .description {
-      display: flex;
-      justify-content: end;
-      flex-direction: column;
-      height: 120px;
-      width: 250px;
+      position: static;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transform: none;
+      font-size: 14px;
+    }
+
+    input:checked + label {
+      width: 100% !important;
+      height: auto !important;
+      min-height: 300px;
+    }
+
+    input:checked + label .description {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    input:checked + label.card-X::before {
+      opacity: 1;
+    }
+
+    .card::before {
+      height: 50%;
       opacity: 0;
-      gap: 8px;
-      transform: translateX(-20px);
-      transition: all 0.5s ease;
-      position: absolute;
-      left: 110px;
-      margin-top: 65px;
+    }
+
+    .description p {
+      font-size: 14px;
+      line-height: 1.5rem;
+    }
+
+    .description h4 {
+      font-size: 16px;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 0.5rem;
+    }
+
+    .tech-tags span {
+      font-size: 12px;
+      padding: 3px 6px;
     }
   }
 }
