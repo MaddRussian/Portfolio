@@ -55,7 +55,28 @@ p {
   height: 86vh;
   padding: 5px;
   border: 2px solid rgb(102, 92, 92);
-  background: radial-gradient(at top left, #385c74, #263b44, #1c2124, #242d31);
+  background: linear-gradient(
+    50deg,
+    #1a2a3a 0%,
+    #0f1a22 25%,
+    #0a0d0e 50%,
+    #111517 75%,
+    #1a2a3a 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientWave 12s ease infinite;
+}
+
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Subheader */
