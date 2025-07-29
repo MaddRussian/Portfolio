@@ -10,21 +10,29 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetId = this.getAttribute('href');
       const targetSection = document.querySelector(targetId);
 
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+                              if (targetSection) {
+        const navbarHeight = 20; // Very minimal offset to get closer to section titles
+        let targetPosition = targetSection.offsetTop - navbarHeight;
+
+        // Add extra offset for contact section
+        if (targetId === '#contact') {
+          targetPosition += 40; // Move contact section down a bit more
+        }
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
         });
       }
     });
   });
 
-  // Active section highlighting
+    // Active section highlighting
   const sections = document.querySelectorAll('.section');
   const navItems = document.querySelectorAll('.nav-item');
 
   function updateActiveNav() {
-    const scrollPosition = window.scrollY + 100;
+    const scrollPosition = window.scrollY + 150;
 
     sections.forEach((section, index) => {
       const sectionTop = section.offsetTop;
