@@ -1,30 +1,42 @@
 // Smooth scrolling and interactive features
 document.addEventListener('DOMContentLoaded', function() {
-  // Smooth scrolling for navigation links
+  // Smooth scrolling for navigation links and hero buttons
   const navLinks = document.querySelectorAll('.nav-link');
+  const heroButtons = document.querySelectorAll('.btn-primary, .btn-secondary');
+
+  function handleSmoothScroll(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      const navbarHeight = 20; // Very minimal offset to get closer to section titles
+      let targetPosition = targetSection.offsetTop - navbarHeight;
+
+      // Add extra offset for contact section
+      if (targetId === '#contact') {
+        targetPosition += 40; // Move contact section down a bit more
+      }
+
+      // Ensure projects section uses consistent positioning
+      if (targetId === '#projects') {
+        targetPosition = targetSection.offsetTop - 20; // Consistent offset for projects
+      }
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
 
   navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
+    link.addEventListener('click', handleSmoothScroll);
+  });
 
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-
-                              if (targetSection) {
-        const navbarHeight = 20; // Very minimal offset to get closer to section titles
-        let targetPosition = targetSection.offsetTop - navbarHeight;
-
-        // Add extra offset for contact section
-        if (targetId === '#contact') {
-          targetPosition += 40; // Move contact section down a bit more
-        }
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
+  heroButtons.forEach(button => {
+    button.addEventListener('click', handleSmoothScroll);
   });
 
     // Active section highlighting
