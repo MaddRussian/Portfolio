@@ -14,8 +14,7 @@ html {
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding: 60px;
   background: linear-gradient(#0a1a25, #070d10, #141618);
   color: rgb(179, 171, 171);
   font-family: 'PP Neue Montreal', sans-serif;
@@ -45,10 +44,15 @@ p {
   letter-spacing: 0.15rem;
 }
 
-/* Header */
-#header {
-  margin-left: 20px;
-  margin-bottom: 0;
+/* Hero Section - Adjusted positioning */
+.hero-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
 }
 
 /* Container */
@@ -133,43 +137,50 @@ p {
   transition: width 0.1s ease;
 }
 
-/* Subheader */
-#subheader {
-  margin-left: 25px;
-  margin-right: 25px;
-  width: 141px;
-  position: relative;
-  z-index: 10;
-}
+
 
 /* Navigation */
-ul {
-  margin-top: 10px;
+#navbar {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
-  flex-direction: column;
-  align-items: end;
+  justify-content: center;
+}
+
+ul {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-  flex: 1 1 auto;
   position: relative;
   z-index: 10;
+  gap: 40px;
+  background: rgba(26, 42, 58, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: 1px solid rgba(58, 106, 139, 0.3);
 }
 
 li {
-  padding: 5px;
-  margin-right: 10px;
-  width: 140px;
+  padding: 8px 0;
   text-align: center;
   font-size: 14px;
   letter-spacing: 0.2rem;
-  border-bottom: 1px solid #4d5051;
+  border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
 
   &:hover {
-    border-bottom: 1px solid #3a6a8b;
+    border-bottom: 2px solid #3a6a8b;
   }
 
   &.active {
-    border-bottom: 1px solid #3a6a8b;
+    border-bottom: 2px solid #3a6a8b;
 
     a {
       color: #3a6a8b;
@@ -187,15 +198,7 @@ a {
   }
 }
 
-/* Social Links */
-#socials-navbar {
-  margin-top: 25px;
 
-  li {
-    padding-top: 6px;
-    padding-bottom: 1px;
-  }
-}
 
 .hidden {
   visibility: hidden;
@@ -210,6 +213,15 @@ a {
   padding: 60px 0;
   position: relative;
   z-index: 5;
+}
+
+/* Ensure consistent spacing for all sections */
+.section:first-child {
+  padding-top: 60px;
+}
+
+.section:last-child {
+  padding-bottom: 60px;
 }
 
 .section-content {
@@ -239,10 +251,11 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1200px;
   width: 100%;
   padding: 0 40px;
+  margin-top: 0;
 }
 
 .hero-title {
@@ -604,6 +617,11 @@ a {
   body {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  #navbar ul {
+    gap: 20px;
+    padding: 10px 20px;
   }
 
   .hero-content {
