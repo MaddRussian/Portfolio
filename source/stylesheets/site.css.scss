@@ -294,6 +294,16 @@ body.light-mode .element {
   opacity: 0.7;
 }
 
+body.light-mode ul {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(108, 117, 125, 0.1);
+}
+
+body.light-mode ul li a {
+  color: #212529;
+  font-weight: 500;
+}
+
 /* Scroll Progress Indicator */
 .scroll-progress {
   position: fixed;
@@ -335,11 +345,11 @@ ul {
   position: relative;
   z-index: 10;
   gap: 40px;
-  background: rgba(26, 42, 58, 0.8);
+  background: rgba(26, 42, 58, 0.2);
   backdrop-filter: blur(10px);
   padding: 15px 30px;
   border-radius: 25px;
-  border: 1px solid rgba(58, 106, 139, 0.3);
+  border: 1px solid rgba(58, 106, 139, 0.1);
 }
 
 li {
