@@ -289,6 +289,11 @@ body.light-mode .theme-toggle-btn .light-icon {
   display: block;
 }
 
+body.light-mode .element {
+  color: #495057;
+  opacity: 0.7;
+}
+
 /* Scroll Progress Indicator */
 .scroll-progress {
   position: fixed;
@@ -506,8 +511,10 @@ a {
 
 .element {
   position: absolute;
-  font-size: 48px;
+  font-size: 32px;
   animation: float 6s ease-in-out infinite;
+  color: #3a6a8b;
+  opacity: 0.8;
 }
 
 .element-1 {
