@@ -1,7 +1,145 @@
 <div id="box">
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+  </div>
   <div id="subheader">
     <h2>Web Developer</h2>
   </div>
   <%= partial "partials/navbar" %>
   <%= partial "socials" %>
+  <!-- Hero Section -->
+  <section id="hero" class="section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">William Sebastian</h1>
+        <p class="hero-subtitle">Full-Stack Web Developer</p>
+        <p class="hero-description">Crafting digital experiences from Tokyo to the world</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#about" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-elements">
+          <div class="element element-1">⚡</div>
+          <div class="element element-2">🚀</div>
+          <div class="element element-3">💻</div>
+          <div class="element element-4">🌏</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="section-content">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-description">
+            Born in 1991 in New Orleans, USA, I've always been fascinated by the intersection of technology and creativity.
+            In the spring of 2022, I took a leap of faith and relocated to Japan, where I immersed myself in the vibrant tech scene.
+          </p>
+          <p class="about-description">
+            This year, I completed Le Wagon's Full-Stack Web Development Bootcamp in Tokyo, where I learned to build robust,
+            scalable applications using modern technologies. I'm excited to continue this journey and join a team where I can
+            grow, contribute, and create meaningful digital experiences.
+          </p>
+          <div class="skills-container">
+            <h3>Technologies I Work With</h3>
+            <div class="skills-grid">
+              <div class="skill-item">Ruby on Rails</div>
+              <div class="skill-item">JavaScript</div>
+              <div class="skill-item">React</div>
+              <div class="skill-item">PostgreSQL</div>
+              <div class="skill-item">HTML/CSS</div>
+              <div class="skill-item">Git</div>
+              <div class="skill-item">Stimulus</div>
+              <div class="skill-item">Mapbox</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>1991</h4>
+                <p>Born in New Orleans, USA</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>2022</h4>
+                <p>Relocated to Japan</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>2024</h4>
+                <p>Completed Le Wagon Bootcamp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="section-content">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <% data.projects.each_with_index do |project, i| %>
+          <div class="project-card" data-project-id="<%= i %>">
+            <div class="project-image">
+              <img src="<%= project.images.first %>" alt="<%= project.name %>">
+              <div class="project-overlay">
+                <a href="<%= project.url %>" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title"><%= project.name %></h3>
+              <p class="project-description"><%= project.description %></p>
+              <div class="project-tech">
+                <% project.tech.each do |tech| %>
+                  <span class="tech-tag"><%= tech %></span>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="section-content">
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-content">
+        <p class="contact-text">
+          I'm always interested in new opportunities and exciting projects.
+          Whether you have a question or just want to say hi, I'd love to hear from you.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com" class="contact-link">
+            <i class="fas fa-envelope"></i>
+            <span>Email Me</span>
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

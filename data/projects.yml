@@ -2,8 +2,8 @@
   description: "A mobile-first rails app for finding live music in Tokyo"
   images:
     - images/projects/tokyo_turntable_home.png
-    - imagesprojects/tokyo_turntable_gig.png
-    - imagesprojects/tokyo_turntable_venues.png
+    - images/projects/tokyo_turntable_gig.png
+    - images/projects/tokyo_turntable_venues.png
     - images/projects/tokyo_turntable_profile.png
   tech:
     - Ruby on rails

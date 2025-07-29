@@ -1,71 +1,84 @@
-# Middleman Template
-A simple way to build static pages with a Rails feel.
+# William Sebastian - Portfolio
 
-## Using
+A modern, single-page portfolio website built with Middleman. Features smooth scrolling navigation, interactive animations, and a beautiful space-themed design.
 
-- [Middleman](https://middlemanapp.com)
-- [Sass](https://sass-lang.com)
-- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [FontAwesome](https://fontawesome.com/icons)
+## Features
 
-## Init a new project
-1. In the repo, click on the green `Code` button to copy your SSH address
-2. In Terminal, move to your code folder (or where you want to download the new repo)
-3. Clone the repository like this
-`git clone git@github.com:dmbf29/middleman-template.git middleman-portfolio`
-4. Move into the directory `cd middleman-portfolio`
-5. Remove my git history. `rm -rf .git`
-6. Start a new git repo in that folder `git init`
-7. Create your own repo `gh repo create middleman-portfolio --public --source=.`
+- **Single-Page Design**: All content is on one page with smooth scrolling between sections
+- **Interactive Navigation**: Active section highlighting and smooth scroll navigation
+- **Responsive Design**: Works beautifully on desktop, tablet, and mobile devices
+- **Animated Elements**: Floating elements, parallax effects, and hover animations
+- **Project Showcase**: Beautiful project cards with hover effects and live demos
+- **Scroll Progress Indicator**: Visual progress bar at the top of the page
+- **Space Theme**: Beautiful gradient backgrounds with animated stars
 
-### Installation
-```
-gem install middleman
-bundle install
-```
-⚠️ You may run into some into some gem warnings.<br>
-Warnings == 👌, but Fatal errors == ⛔️<br>
-If you get a fatal error, you can try fixing it with `bundle update` and hope for the best 🤞
+## Sections
 
-## Run a server
-- `middleman`<br>
-or if that fails, try
-- `bundle exec middleman`
+1. **Hero Section**: Introduction with animated floating elements
+2. **About Section**: Personal story with skills and timeline
+3. **Projects Section**: Showcase of featured projects with live demos
+4. **Contact Section**: Contact information and social links
 
-## Deploy
-1. [Sign into Netlify](https://www.netlify.com/)
-2. Add new site -> Import an existing project -> Github
-3. Choose repository and branch
-4. Make sure your deploy settings look like this:
-<img width="400" alt="Screen Shot 2021-06-18 at 14 19 13" src="https://user-images.githubusercontent.com/25542223/122510271-49d34900-d040-11eb-853f-5105b5d48fcd.png">
-5. Website is deployed!
-6. (Add purchased domain)
+## Technologies Used
 
-## Meta Tags
-You can copy and paste these meta tags inside your `<head></head>` and update the information.
-```
-<title><%= current_page.data.title || "NAME OF MY SITE | MY TITLE" %></title>
-<meta name="description" content="Description of my portfolio site">
-<!-- Facebook Open Graph data -->
-<meta property="og:title" content="NAME OF MY SITE | MY TITLE" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="THE_URL_OF_MY_PORTFOLIO" />
-<meta property="og:image" content="<%= image_path 'MY_OG_IMAGE_WITH_RIGHT_SIZE.png' %>" />
-<meta property="og:description" content="Description of my portfolio site" />
-<meta property="og:site_name" content="NAME OF MY SITE | MY TITLE" />
-<!-- Twitter Card data -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@twitter_handle">
-<meta name="twitter:title" content="NAME OF MY SITE | MY TITLE">
-<meta name="twitter:description" content="Description of my portfolio site">
-<meta name="twitter:creator" content="@twitter_handle">
-<meta name="twitter:image:src" content="<%= image_path 'MY_OG_IMAGE_WITH_RIGHT_SIZE.png' %>">
+- **Middleman**: Static site generator
+- **SCSS**: Advanced CSS with variables and mixins
+- **JavaScript**: Interactive features and animations
+- **Font Awesome**: Icons
+- **PP Neue Montreal**: Typography
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   bundle install
+   ```
+
+2. Start the development server:
+   ```bash
+   bundle exec middleman server
+   ```
+
+3. Open your browser and navigate to `http://localhost:4567`
+
+## Customization
+
+### Adding Projects
+Edit `data/projects.yml` to add or modify projects:
+
+```yaml
+- name: Project Name
+  description: "Project description"
+  images:
+    - images/projects/project_image.png
+  tech:
+    - Technology 1
+    - Technology 2
+  url: https://project-url.com
 ```
 
-## Contributing
+### Styling
+The main styles are in `source/stylesheets/site.css.scss`. The design uses a space theme with:
+- Primary color: `#3a6a8b`
+- Background: Dark gradient with animated stars
+- Typography: PP Neue Montreal
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+### JavaScript Features
+Interactive features are in `source/javascripts/site.js`:
+- Smooth scrolling navigation
+- Active section highlighting
+- Scroll progress indicator
+- Hover animations
+- Intersection Observer animations
+
+## Build for Production
+
+```bash
+bundle exec middleman build
+```
+
+This will generate static files in the `build/` directory.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
