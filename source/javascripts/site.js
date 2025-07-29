@@ -175,4 +175,20 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollProgressBar.style.width = scrollPercent + '%';
     });
   }
+
+  // Theme toggle functionality
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const body = document.body;
+
+  // Check for saved theme preference or default to dark
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  body.classList.toggle('light-mode', currentTheme === 'light');
+
+  themeToggleBtn.addEventListener('click', function() {
+    body.classList.toggle('light-mode');
+
+    // Save theme preference
+    const newTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+  });
 });

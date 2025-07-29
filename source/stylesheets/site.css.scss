@@ -119,6 +119,176 @@ p {
   50% { opacity: 0.4; }
 }
 
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 8px;
+  z-index: 1001;
+}
+
+.theme-toggle-btn {
+  background: rgba(26, 42, 58, 0.9);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(58, 106, 139, 0.4);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #3a6a8b;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(58, 106, 139, 0.2);
+  transform: scale(1.1);
+}
+
+.theme-toggle-btn .light-icon {
+  display: none;
+}
+
+.theme-toggle-btn .dark-icon {
+  display: block;
+}
+
+/* Light mode styles */
+body.light-mode {
+  background: linear-gradient(#e9ecef, #dee2e6, #ced4da);
+  color: #495057;
+}
+
+body.light-mode #box {
+  background: linear-gradient(
+    50deg,
+    #f8f9fa 0%,
+    #e9ecef 25%,
+    #dee2e6 50%,
+    #ced4da 75%,
+    #f8f9fa 100%
+  );
+  border: 2px solid #adb5bd;
+}
+
+body.light-mode .hero-title {
+  color: #212529;
+}
+
+body.light-mode .hero-subtitle {
+  color: #495057;
+}
+
+body.light-mode .hero-description {
+  color: #6c757d;
+}
+
+body.light-mode .section-title {
+  color: #212529;
+  border-bottom: 2px solid #6c757d;
+}
+
+body.light-mode .about-description {
+  color: #495057;
+}
+
+body.light-mode .skills-container h3 {
+  color: #495057;
+}
+
+body.light-mode .skill-item {
+  background: rgba(108, 117, 125, 0.1);
+  border: 1px solid #6c757d;
+  color: #495057;
+}
+
+body.light-mode .skill-item:hover {
+  background: rgba(108, 117, 125, 0.2);
+}
+
+body.light-mode .timeline-content h4 {
+  color: #495057;
+}
+
+body.light-mode .timeline-content p {
+  color: #6c757d;
+}
+
+body.light-mode .project-card {
+  background: rgba(248, 249, 250, 0.8);
+  border: 1px solid #ced4da;
+}
+
+body.light-mode .project-title {
+  color: #212529;
+}
+
+body.light-mode .project-description {
+  color: #495057;
+}
+
+body.light-mode .tech-tag {
+  background: rgba(108, 117, 125, 0.2);
+  border: 1px solid #6c757d;
+  color: #495057;
+}
+
+body.light-mode .contact-text {
+  color: #495057;
+}
+
+body.light-mode .contact-link {
+  border: 2px solid #6c757d;
+  color: #495057;
+}
+
+body.light-mode .contact-link:hover {
+  background: #6c757d;
+  color: #fff;
+}
+
+body.light-mode .btn-primary {
+  background: #495057;
+  border-color: #495057;
+  color: #fff;
+}
+
+body.light-mode .btn-primary:hover {
+  background: #343a40;
+  border-color: #343a40;
+}
+
+body.light-mode .btn-secondary {
+  color: #495057;
+}
+
+body.light-mode .btn-secondary:hover {
+  background: #495057;
+  color: #fff;
+}
+
+body.light-mode .theme-toggle-btn {
+  background: rgba(248, 249, 250, 0.8);
+  border: 1px solid rgba(108, 117, 125, 0.3);
+  color: #495057;
+}
+
+body.light-mode .theme-toggle-btn:hover {
+  background: rgba(108, 117, 125, 0.2);
+}
+
+body.light-mode .theme-toggle-btn .dark-icon {
+  display: none;
+}
+
+body.light-mode .theme-toggle-btn .light-icon {
+  display: block;
+}
+
 /* Scroll Progress Indicator */
 .scroll-progress {
   position: fixed;
