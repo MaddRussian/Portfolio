@@ -806,6 +806,12 @@ a {
     padding-right: 30px;
   }
 
+  /* Mobile theme toggle positioning */
+  .theme-toggle {
+    top: 15px;
+    right: 15px;
+  }
+
   #navbar ul {
     gap: 20px;
     padding: 10px 20px;
@@ -815,10 +821,27 @@ a {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
+    justify-items: center;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-title {
     font-size: 48px;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    text-align: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
   }
 
   .about-grid {
