@@ -37,3 +37,13 @@
     - Ruby on rails
     - PostgreSQL
   url: https://my-movie-watchlist-a8e94ec19003.herokuapp.com
+
+- name: 敬語クイズ (Keigo Quiz)
+  description: "Master the art of Japanese keigo - the polite language system used in professional and formal contexts"
+  images:
+    - images/projects/keigo_quiz.png
+  tech:
+    - JavaScript
+    - HTML/CSS
+    - Cursor
+  url: https://maddrussian.github.io/keigo-quiz/
